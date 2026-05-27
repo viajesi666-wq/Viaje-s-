@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaje Sí - Plataforma Oficial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- HERO SECTION -->
+    <div class="hero-text">
+        <h1>Viaje Sí</h1>
+        <p>La plataforma de transporte más avanzada, transparente y segura de Buenos Aires. Diseñada para conectar a conductores y pasajeros con tecnología de última generación.</p>
+    </div>
+
+    <!-- PHONE SIMULATOR -->
+    <div class="phone">
+        <!-- NAVIGATION TABS -->
+        <div class="tabs">
+            <div class="tab active" data-tab="pasajero">Pasajero</div>
+            <div class="tab" data-tab="chofer">Chofer</div>
+            <div class="tab" data-tab="referidos">Viajá Gratis</div>
+        </div>
+
+        <!-- PHONE SCREEN CONTENT -->
+        <div class="phone-screen">
+            
+            <!-- PASAJERO VIEW -->
+            <div id="pasajero" class="content-section active">
+                <div class="input-group">
+                    <label>ORIGEN</label>
+                    <input 
+                        type="text" 
+                        id="origen"
+                        value="Av. Cabildo 2000, Belgrano"
+                        placeholder="¿De dónde salís?"
+                    >
+                </div>
+                <div class="input-group">
+                    <label>DESTINO</label>
+                    <input 
+                        type="text" 
+                        id="destino"
+                        placeholder="¿A dónde vamos?"
+                    >
+                </div>
+                <button class="btn-calc" id="btn-calcular">Calcular Precio</button>
+                <div id="precio-estimado" class="precio-resultado"></div>
+                
+                <div class="sos-container">
+                    <p>Seguridad 24/7</p>
+                    <button class="btn-sos" id="sos-btn">SOS</button>
+                </div>
+            </div>
+
+            <!-- CHOFER VIEW -->
+            <div id="chofer" class="content-section">
+                <div class="wallet">
+                    <p>Saldo Disponible</p>
+                    <h3>$45.000 ARS</h3>
+                    <button class="btn-withdraw" id="btn-withdraw">Retirar Dinero</button>
+                </div>
+                <div class="trip-details">
+                    <p class="trip-title">Último Viaje (12 km)</p>
+                    <div class="trip-row">
+                        <span>Tarifa Bruta:</span>
+                        <span>$6.200</span>
+                    </div>
+                    <div class="trip-row negative">
+                        <span>Comisión App (15%):</span>
+                        <span>-$930</span>
+                    </div>
+                    <hr>
+                    <div class="trip-row positive">
+                        <span>Ganancia Neta:</span>
+                        <span>$5.270</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REFERRAL VIEW -->
+            <div id="referidos" class="content-section">
+                <h4>¡Invitá y Ganá!</h4>
+                <p class="referral-description">Compartí tu código. Cuando tu amigo haga su primer viaje, vos ganás $1.000 de regalo.</p>
+                <div class="qr-box">
+                    <div class="qr-placeholder">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                </div>
+                <p class="referral-code">VIAJESI-JUAN123</p>
+                <button class="btn-calc" id="btn-copy">Copiar Enlace</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/app.js"></script>
+
+</body>
+</html>
